@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
 body {
-    margin: 0 auto;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 1rem;
 }
 
@@ -9,6 +10,7 @@ h1 a {
     color: #333;
     font-size: 4rem;
 }
+
 
 h1 a, nav li a, ul, .post-date, .post-content a {
     font-family: 'Lora', serif;
@@ -25,7 +27,7 @@ nav li a {
     list-style: none;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 1.5 rem;
+    font-size: 1.2rem;
 }
 
 nav {
@@ -54,7 +56,6 @@ h2 {
 
 p {
     color: #333;
-    font-size: 'Helvetica', sans-serif;
     font-size: 1rem;
 }
 
@@ -78,4 +79,56 @@ p a:active {
 .post-date {
     text-align: right;
     border-bottom: 1.5px solid #d0d0d0;
+}
+
+/* large view */
+
+@media screen and (min-width: 600px){
+    nav ul {
+        display: inline-flex;
+        column-gap: 10px;
+    }
+
+    nav {
+        text-align: right;
+    }
+   
+    article {
+        display: grid;
+        grid-template-columns: 1fr 3fr; 
+        justify-content: center;
+        text-align: center; 
+    } 
+    .post-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0.5rem;
+        border-left: 1.5px solid #d0d0d0;
+    }
+
+    .post-content img {
+        justify-items: center;
+    }
+
+    .post-content img {
+        text-align: center;
+    }
+
+    .post-date {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-bottom: 0;
+        padding: 0.5rem;
+    }
+
+    p {
+        width: 90%
+    }
+    .post-content + .post-content:before {
+        content: "";
+        border-top: 1px dotted #000;
+        margin-top: 10px;
+        display: block;
+      }
 }
