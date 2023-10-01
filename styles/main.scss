@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+// Variables
+$primary-color: #333;
+$secondary-color: #666;
+$link-color: #00ddff;
+$accent-color: #DEB887;
+$border-color: #d0d0d0;
+$text-font: 'Lora', serif;
+
+// Mixin for text decoration
+@mixin text-link-decoration {
+    color: $link-color;
+    text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1 a {
+    color: $primary-color;
+    font-size: 4rem;
+}
+
+h1 a, nav li a, ul, .post-date, .post-content a {
+    font-family: $text-font;
+    @include text-link-decoration;
+}
+
+header {
+    text-align: center;
+}
+
+nav li a {
+    color: $secondary-color;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    &:hover {
+        color: $link-color;
+    }
+    &:active {
+        color: $accent-color;
+    }
+}
+
+nav {
+    border-top: 1.5px solid $border-color;
+    border-bottom: 1.5px solid $border-color;
+}
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    color: $primary-color;
+    font-size: 1.7em;
+}
+
+p {
+    color: $primary-color;
+    font-size: 1rem;
+}
+
+.post-content a {
+    @include text-link-decoration;
+}
+
+.post-content {
+    text-align: center;
+}
+
+p a:hover {
+    color: $link-color;
+}
+
+p a:active {
+    color: $accent-color;
+}
+
+.post-date {
+    text-align: right;
+    border-bottom: 1.5px solid $border-color;
+}
+
+// Media query
+@media screen and (min-width: 600px) {
+    nav ul {
+        display: inline-flex;
+        column-gap: 10px;
+    }
+
+    body {
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 1rem;
+    }
+
+    nav {
+        text-align: right;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .post-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0.5rem;
+        border-left: 1.5px solid $border-color;
+    }
+
+    .post-content img {
+        justify-items: center;
+    }
+
+    .post-content img {
+        text-align: center;
+    }
+
+    .post-date {
+        display: grid;
+        grid-template-columns: 1fr;
+        border-bottom: 0;
+        padding: 0.5rem;
+    }
+
+    p {
+        width: 90%;
+    }
+
+    .post-content:before {
+        content: "";
+        border-top: 1px dotted #000;
+        margin-top: 10px;
+        display: block;
+    }
+}
