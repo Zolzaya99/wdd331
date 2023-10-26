@@ -42,10 +42,10 @@ $border-radius: 5px;
     }
 
     .col-grid {
-        display: grid;
+        display: $display;
         flex-direction: column; 
         flex-wrap: wrap;
-        justify-content: center; 
+        justify-content: center;
 
         .card {
             flex: 3; 

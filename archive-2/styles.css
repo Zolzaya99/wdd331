@@ -33,7 +33,7 @@
   text-align: center;
 }
 .card-grid .col-grid {
-  display: grid;
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
