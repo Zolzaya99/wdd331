@@ -1,0 +1,63 @@
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-grid .row-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-grid .row-grid .card {
+  width: auto;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.card-grid .row-grid .card img {
+  width: 100%;
+  height: 100%;
+}
+.card-grid .row-grid .card h2 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+.card-grid .col-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-grid .col-grid .card {
+  flex: 3;
+  width: 100%;
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.card-grid .col-grid .card img {
+  width: 100%;
+  height: 100%;
+}
+.card-grid .col-grid .card img h2 {
+  margin: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
